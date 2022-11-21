@@ -10,4 +10,3 @@ int b = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите первое число");
 int c = Convert.ToInt32(Console.ReadLine());
 
-if
