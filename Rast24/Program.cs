@@ -18,5 +18,9 @@ int sumDigits(int a)
     return sum;
 }
 
-int SumDigits = sumDigits(A);
-Console.WriteLine($"{A} -> {SumDigits}");
+if(A > 0 )
+{
+    int SumDigits = sumDigits(A);
+    Console.WriteLine($"{A} -> {SumDigits}");
+}
+else Console.WriteLine("Требуется ввести натуральное число");
