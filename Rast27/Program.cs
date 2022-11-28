@@ -21,4 +21,4 @@ while (number > 0)
     number = number/10;
     
 }
-Console.WriteLine(num);
+Console.WriteLine($"{number} -> {num}");
