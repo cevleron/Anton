@@ -3,13 +3,27 @@
 
 
 
-Console.WriteLine("Введите количество элементов массива");
-int size = Convert.ToInt32(Console.ReadLine());
-int[] array = new int[size];
+// Console.WriteLine("Введите количество элементов массива");
+// int size = Convert.ToInt32(Console.ReadLine());
+int[] array = new int[8];
 
-Random rnd = new Random();
-for (int i = 0; i < array.Length; i++)
+void RandomArray(int[] array)
 {
-    array[i] = rnd.Next();
-    Console.WriteLine(array[i]);
+    Random rnd = new Random();
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = rnd.Next(0,2);
+
+        
+    }
 }
+
+void PrintArray (int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i]);
+    }
+}
+RandomArray(array);
+PrintArray(array);
