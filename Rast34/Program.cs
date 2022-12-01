@@ -33,8 +33,8 @@ int examArray (int [] arr)
     }
     return count;
 }
-int [] array = ArrayRndInt (4,100,1000);
+int [] array = ArrayRndInt (100,100,1000);
 PrintArray(array);
 
 int count = examArray(array);
-Console.WriteLine($"{array} -> {count}");
+Console.WriteLine($"В данном массиве четных чисел -> {count}");
