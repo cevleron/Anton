@@ -18,9 +18,20 @@ void PrintArray(double[] arr)
     for (int i = 0; i < arr.Length; i++)
     {
         if (i < arr.Length - 1) Console.Write($"{Math.Round(arr[i],2)}, ");
-        else Console.Write($"{Math.Round(arr[i],2)}");
+        else Console.Write($"{Math.Round(arr[i],1)}");
     }
     Console.WriteLine("]");
 }
 double[] array = CreateArrayRndInt(5, 0, 10);
 PrintArray(array);
+
+// void Sravnenie (double [] arr)
+// {
+//     int min = 0;
+//    for (int i = 0; i < arr.Length; i++)
+//    {
+//         if (min < arr[i] )
+//         else  
+//         result=max-min;
+//    }
+// }

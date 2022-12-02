@@ -41,4 +41,4 @@ int countArray (int[]arr)
 }
 
 int count = countArray(array);
-Console.WriteLine($"{array}->{count}");
+Console.WriteLine($"Двухзначных чисел в данном массиве ->{count}");

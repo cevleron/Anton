@@ -24,9 +24,6 @@ void PrintArray(int[] arr)
     }
     Console.WriteLine("]");
 }
-// int[] array = CreateArrayRndInt(5, 0, 10);
-// PrintArray(array);
-
 int[] NewArray(int[] arr)
 {
     int newArraySize = arr.Length / 2;
