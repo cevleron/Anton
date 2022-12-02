@@ -50,7 +50,7 @@ int GetSumPositiveElem (int[] arr)
 
 int [] array = CreateArrayRndInt(12,-9,9);
 PrintArray(array);
-
+ 
 int sumNegative = GetSumNegativeElem(array);
 int sumPositive = GetSumPositiveElem(array);
 Console.WriteLine($"Сумма положительных чисел = {sumPositive}, сумма отрицательных чисел = {sumNegative}");
