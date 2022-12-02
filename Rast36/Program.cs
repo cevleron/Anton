@@ -23,23 +23,18 @@ void PrintArray(int[] arr)
     }
     Console.WriteLine("]");
 }
-// int[] array = CreateArrayRndInt(5, 0, 10);
-// PrintArray(array);
-
-int[] NewArray(int[] arr)
+int NewArray(int[] arr)
 {
-    int newArraySize = arr.Length / 2;
-    if (arr.Length % 2 == 1) newArraySize += 1;
-    int[] newArray = new int[newArraySize];
-    for (int i = 0; i < arr.Length / 2; i++)
+    int result = 0;
+    for (int i = 0; i < arr.Length; i++)
     {
-        newArray[i] = arr[i] * arr[arr.Length - 1 - i];
+    if (i % 2 == 1)
+    result += arr[i];
     }
-    if (arr.Length % 2 == 1) newArray[newArraySize - 1] = arr[arr.Length / 2];
-    return newArray;
+    return result;
 }
 int[] array = CreateArrayRndInt(5, 0, 10);
 PrintArray(array);
 
-int[] newArr = NewArray(array);
-PrintArray(newArr);
+int newArr = NewArray(array);
+Console.WriteLine($"{newArr}");
