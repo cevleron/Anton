@@ -30,8 +30,6 @@ PrintArray(array);
 //     int min = 0;
 //    for (int i = 0; i < arr.Length; i++)
 //    {
-//         if (min < arr[i] )
-//         else  
-//         result=max-min;
+//         if 
 //    }
 // }
