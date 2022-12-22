@@ -33,3 +33,36 @@ void PrintMatrix(int[,] matrix)
         Console.WriteLine("]");
     }
 }
+
+double [] MidleArifmetic (int [,] matrix)
+{
+    double [] ArithmeticMassiv = new double[matrix.GetLength(1)];
+    for (int j = 0; j < matrix.GetLength(1); j++)
+    {
+        double summaArithmetic = 0;
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            summaArithmetic += matrix[i, j];
+        }
+        ArithmeticMassiv[j] = Math.Round(summaArithmetic / matrix.GetLength(0), 1);
+    }
+    return ArithmeticMassiv;
+}
+
+void PrintArray(double[] arr)
+{
+    Console.Write("[");
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (i < arr.Length - 1) Console.Write($"{arr[i]} , ");
+        else Console.Write($"{arr[i]}");
+    }
+    Console.WriteLine("]");
+}
+
+int[,] creatMatrixRndInt = CreateMatrixRndInt(3, 3, 1, 5);
+PrintMatrix(creatMatrixRndInt);
+double[] array = MidleArifmetic(creatMatrixRndInt);
+Console.Write("Среднее арифметическое элементов в столбцах: ");
+PrintArray(array);
+
