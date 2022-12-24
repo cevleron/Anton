@@ -61,7 +61,7 @@ int[] MetrixToArray(int[,] matrix)
 }
 void PrintArray(int[] arr)
 {
-    Console.Write("[");
+    Console.Write("\n[");
     for (int i = 0; i < arr.Length; i++)
     {
         Console.Write("{0,4}", arr[i]);
@@ -80,6 +80,8 @@ void CountValue(int[] arr)
         if (arr[i] == num) count++;
         else 
         {
+            // Алтернативный метод вывода
+            // PrintMessage( num, count);
             Console.WriteLine($"{num} встречается {count} раз");
             count = 1;
             num = arr[i];
@@ -87,7 +89,15 @@ void CountValue(int[] arr)
          
     }
     Console.WriteLine($"{num} встречается {count} раз");
+        // Алтернативный метод вывода
+        // PrintMessage( num, count);
 }
+// Алтернативный метод вывода
+// void PrintMessage(int num,int count)
+// {
+// Console.WriteLine($"{num} встречается {count} раз");
+// }
+
 
 int[,] array2D = CreateMatrixRndInt(3, 4, 1, 9);
 PrintMatrix(array2D);
