@@ -10,6 +10,8 @@
 // 4 2 4
 // 2 6 7
 
+
+// Метод по созданию двумерного массива.
 int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
 {
     int[,] matrix = new int[rows, columns];
@@ -25,6 +27,7 @@ int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
     return matrix;
 }
 
+// Метод печатающий двумерный массив.
 void PrintMatrix(int[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
