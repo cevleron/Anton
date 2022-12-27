@@ -10,8 +10,9 @@ int number2 = Convert.ToInt32(Console.ReadLine());
 
 int DegreeDigits(int num, int degree)
 {
-    if (degree == 0) return 1;
-    return num * DegreeDigits(num, degree - 1);
+    // if (degree == 0) return 1;
+    // Тернарный оператор
+    return degree == 0 ? 1 : num * DegreeDigits(num, degree - 1);
 }
 
 Console.WriteLine(DegreeDigits(number1, number2));
