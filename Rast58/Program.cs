@@ -61,17 +61,23 @@ PrintMatrix(matrix2);
 
 int[,] GenerationMassiv(int[,] matrix, int[,] matrix2)
 {
-    if(matrix.GetLength != matrix2.GetLength)
-    {
-        Console.Write("Умножать матрицы нельзя так как они не соответствуют правилам умножения");
-    }
-    int [,] matrix3 = new int[]
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < matrix.GetLength(1); j++)
+    if (matrix.GetLength != matrix2.GetLength)
+       { Console.WriteLine("Умножать матрицы нельзя так как они не соответствуют правилам умножения");}
+        int[,] matrix3 = new int[matrix.GetLength(0), matrix2.GetLength(1)];
+        for (int i = 0; i < matrix3.GetLength(0); i++)
         {
-            
+            for (int j = 0; j < matrix3.GetLength(1); j++)
+            {
+                matrix3[i, j] = 0;
+                for (int k = 0; k < matrix.GetLength(1); k++)
+                {
+                    matrix3[i, j] += matrix[i, k] * matrix2[k, j];
+                }
+            }
         }
-    }
-    return default;
+        return matrix3;
+    
 }
+
+int[,] generationMassiv = GenerationMassiv(matrix, matrix2);
+PrintMatrix(generationMassiv);
