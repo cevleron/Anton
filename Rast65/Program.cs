@@ -9,18 +9,21 @@ int M = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите натрульное число");
 int N = Convert.ToInt32(Console.ReadLine());
 
+NaturalNumbers(M, N);
+
 void NaturalNumbers(int num1, int num2)
 {
-    int num = 0;
-    num1 = M;
-    num2 = N;
-    if (num1 < num2) return;
-    Console.Write($"{num1} ");
-    NaturalNumbers(num + 1);
-   
-    else if (num1 > num2) return;
-    Console.Write($"{num2} ");
-    NaturalNumbers(num2-1);
-    
+    if (num1 > num2)
+    {
+        // Console.Write($"{num2} ");
+        NaturalNumbers(num1, num2 + 1);
+        Console.Write($"{num2} ");
+    }
+    if (num1 < num2)
+    {
+        Console.Write($"{num1} ");
+        NaturalNumbers(num1 + 1, num2);
+    }
+    if (num1 == num2) Console.Write($"{num1} ");
+
 }
-NaturalNumbers(num1,num2);
